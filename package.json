@@ -1,0 +1,27 @@
+{
+  "name": "gmo-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damithadayananda/gmo-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damithadayananda/gmo-data/issues"
+  },
+  "homepage": "https://github.com/damithadayananda/gmo-data#readme",
+  "dependencies": {
+    "binary-uuid": "^2.0.3",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "csv-parse": "^4.16.0",
+    "mysql2": "^2.2.5"
+  }
+}
