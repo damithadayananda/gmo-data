@@ -15,7 +15,7 @@ function createConnectionPool(){
 }
 
 function fileRead(){
-    const dirPath = "/home/nodeuser/current/load-test/gmo-data"
+    const dirPath = "/home/nodeuser/current/load-test/gmo-data/files"
 
     fs.readdir(dirPath,async (err,files)=>{
         if(err){
@@ -24,7 +24,6 @@ function fileRead(){
         for(let j=0;j<files.length;j++){
             let fileContent =  fs.readFileSync(dirPath+"/"+files[j])
             let lines = fileContent.toString().split("\n")
-            console.log(lines.length)
             for(let i=0;i<lines.length;i++){
                 let line = lines[i].split(",")
                 if(line.length<4){
@@ -34,6 +33,7 @@ function fileRead(){
                 let data = await mySqlProcess([uuid.createBinaryUUID().uuid,line[0],line[1],line[2],'mock',1])
                 console.log(i+":"+line[0]+" is done")
             }
+        console.log("End of file:"+ j)
         }
     })
 }
