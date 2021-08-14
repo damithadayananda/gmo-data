@@ -15,7 +15,7 @@ function createConnectionPool(){
 }
 
 function fileRead(){
-    const dirPath = "/home/damitha/Desktop/my projects/node/node-playground/1MInsert/files"
+    const dirPath = "/home/nodeuser/current/gmo-data/1MInsert/files"
 
     fs.readdir(dirPath,async (err,files)=>{
             if(err){
